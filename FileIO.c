@@ -9,8 +9,7 @@ takes a filename as argument and reads the regualr expression in post fix notaio
 */
 {
 	char stringBuffer[255];
-	//
-	FILE fp* = fopen(filename, r+);
+	FILE* fp = fopen(filename, r+);
 
 	fscanf(fp, "%s", stringBuffer);
 
