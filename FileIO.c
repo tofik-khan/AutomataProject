@@ -20,8 +20,9 @@ void getExpression(char* filename, char* stringBuffer)
 takes a filename as argument and reads the regualr expression in post fix notaion and returns the post fix expression.
 */
 {
+
 	FILE* fp = fopen(filename, "r+");
 
 	fscanf(fp, "%s", stringBuffer);
-
+	printf("Contents of the file: %s", stringBuffer);
 }
