@@ -27,6 +27,6 @@ takes a filename as argument and reads the regualr expression in post fix notaio
 
 	FILE* fp = fopen(filename, "r+");
 
-	fgets(fp, MAX_LENGTH, stringBuffer);
+	fgets(stringBuffer, MAX_LENGTH, fp);
 	printf("Contents of the file: %s", stringBuffer);
 }
