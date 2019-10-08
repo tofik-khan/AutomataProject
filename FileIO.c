@@ -1,12 +1,16 @@
 //#include "include.h"
 #include <stdio.h>
 #include <stdlib.h>
+#define MAX_LENGTH 255
+
+
 void getExpression(char*, char*);
 
 
 int main (void)
 {
-	char stringBuffer[255];
+	char stringBuffer[MAX_LENGTH];
+	printf("test");
 	getExpression("Test.txt", stringBuffer);
 
 	printf("%s",stringBuffer);
@@ -23,6 +27,6 @@ takes a filename as argument and reads the regualr expression in post fix notaio
 
 	FILE* fp = fopen(filename, "r+");
 
-	fscanf(fp, "%s", stringBuffer);
+	fgets(fp, MAX_LENGTH, stringBuffer);
 	printf("Contents of the file: %s", stringBuffer);
 }
